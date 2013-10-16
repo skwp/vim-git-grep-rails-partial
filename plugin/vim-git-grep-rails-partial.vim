@@ -15,7 +15,7 @@
 " Find references to the currently opened partial (file)
 " by pressing P in command mode 
 function! GitGrepCurrentPartial() 
-  :call GitGrep('partial\.\*' . substitute(substitute(substitute(expand('%<'),'.*\/','','g'), '^_','','g'),'.html','','g'))
+  :call GitGrep('render\.\*' . substitute(substitute(substitute(expand('%<'),'.*\/','','g'), '^_','','g'),'.html','','g'))
 endfunction
 
 command! GitGrepCurrentPartial call GitGrepCurrentPartial()
